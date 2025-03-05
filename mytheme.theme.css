@@ -1,0 +1,19 @@
+/**
+ * @name MyTheme
+ * @author Rey
+ * @description Describe the aesthetic. Maybe a support server link.
+ * @version 0.0.1
+ */
+
+:root {
+	--background-tertiary: #838383b8;
+
+	--character: url('https://frsardhf.github.io/discord-mytheme/img/rio.jpg');
+}
+
+.chatContent_f75fb0 {
+	background-image: var(--character);
+	background-size: cover; 
+	background-repeat: no-repeat;
+	background-position: center center;
+}
