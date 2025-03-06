@@ -5,15 +5,69 @@
  * @version 0.0.1
  */
 
-:root {
-	--background-tertiary: #838383b8;
-
+ :root {
+	--background-primary: color-mix(in oklab,var(--primary-200) 30%, 
+			var(--theme-base-color,#000) var(--theme-base-color-amount,0%));
+	--background-secondary: color-mix(in oklab,var(--primary-200) 30%, 
+			var(--gradient-primary,#000) var(--theme-base-color-amount,0%));
+	--background-tertiary: linear-gradient(
+    to right,
+    var(--theme-base-color),
+    var(--gradient-secondary)
+  );
+	--theme-base-color: #c9ebf4;
+	--gradient-primary: #eaf0ff;
+	--gradient-secondary: #81dbf6;
+	--background-secondary-alt: #d9e1f4;
+	--theme-base-color-amount: 100%;
 	--character: url('https://frsardhf.github.io/discord-mytheme/img/rio.jpg');
+	
+	--text-link: #ababe4;
+	--interactive-normal: #5ac0e2;
+	--interactive-hover: #11dddd;
+	--interactive-active: #24c0f5;
+	--header-primary: #d10000;
+	--header-secondary: #ff7171;
+	--channel-text-area-placeholder: #000;
+	--channels-default: #ababe4;
+	--svg-color: #ababe4;
 }
 
 .chatContent_f75fb0 {
 	background-image: var(--character);
-	background-size: cover; 
+	background-size: 230%;
+	background-position: 80% 10%;
 	background-repeat: no-repeat;
-	background-position: center center;
+}
+
+.icon__2ea32,
+.iconContainer__2ea32 svg,
+.containerDefault_c69b6d svg,
+.link__2ea32 svg path {
+    color: var(--svg-color) !important;
+    fill: var(--svg-color) !important;
+}
+
+/* Message Bubble Styling */
+.contents_c19a55 {
+  background: var(--theme-base-color, var(--background-secondary));
+  width: fit-content;
+  padding: 4px 7px !important;
+  border-radius: 7px;
+}
+
+/* Target dark theme in Discord */
+.theme-dark {
+	--theme-base-color: #1a2733 !important;
+	--gradient-primary: #172635 !important;
+	--gradient-secondary: #0a4d6a !important;
+	--background-secondary-alt: #1d3e53 !important;
+	--text-normal: #e0f7ff !important;
+	--text-muted: #a3d4e6 !important;
+	--text-link: #96c8ff !important;
+	--channel-text-area-placeholder: #a3d4e6 !important;
+	--header-primary: #7fd9f2 !important;
+	--header-secondary: #5ac0e2 !important;
+	--channels-default: #5ac0e2 !important;
+	--svg-color: #5ac0e2 !important;
 }
